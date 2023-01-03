@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.set('view engine','ejs');
 app.use(cors());
 // app.use(router);
-// app.use(DBrouter);
+app.use(DBrouter);
 app.use(express.json);
 app.listen(3001,()=>{
     console.log('start!');

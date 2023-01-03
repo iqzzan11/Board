@@ -54,7 +54,10 @@ section.notice {
     padding: 0;
     font-size: 16px;
 }
-#board-search  .search_form {position: relative}
+
+#board-search .search_form {
+    position: relative
+}
 
 #board-search .search_form .write {
     position: absolute;
@@ -208,36 +211,71 @@ section.notice {
 
 #divPaging>div {
     float: left;
-    width: 30px;
+    width: 35px;
     margin: 0 auto;
     text-align: center;
+    cursor: pointer;
 }
 
-.table{
+#divPaging>div.current {
+    font-weight: 900;
+}
+
+.table {
     border-collapse: separate;
     border-spacing: 1px;
     text-align: left;
     line-height: 1.5;
     border-top: 1px solid #ccc;
-    margin : 20px 10px;
+    margin: 20px 10px;
 }
+
 table tr {
-     width: 50px;
-     padding: 10px;
+    width: 50px;
+    padding: 10px;
     font-weight: bold;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
 }
+
 table td {
-     width: 100px;
-     padding: 10px;
-     vertical-align: top;
-     border-bottom: 1px solid #ccc;
+    width: 100px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
 }
 
 table td input {
     padding: 5px;
 }
 
-.foot_area {width: 100%;position: relative}
-.foot_area .btn {line-height: 2;margin-right: 10px;}
+.foot_area {
+    width: 100%;
+    position: relative
+}
+
+.foot_area .btn {
+    line-height: 2;
+    margin-right: 10px;
+}
+
+.fl{float:left}
+.fr{float:right}
+
+.gall_writer::after{clear: both;display: block; content: '';}
+.gallview_head{margin:16px 0 29px;padding-bottom:11px;border-bottom:1px solid #eee}
+.gallview_head .title{padding:0 2px;margin-bottom:7px;font-size:14px}/*211118 폰트 버그 margin-bottom:9px;*/
+.gallview_head .title.autodel{margin-bottom:9px}/*자동 삭제된 글입니다. *//*211118 폰트 버그 스타일 추가*/
+
+.gallview_head .gall_writer{padding:0 2px}
+.gallview_head .gall_date::before{content:"";display:inline-block;width:1px;height:12px;background:#ccc;margin:0 10px 0 6px;vertical-align:-2px}
+.gallview_head .gall_writer > .fr{padding-right:7px}
+.gallview_head .gall_writer .fr > span::before, .album_head .gall_writer .fr > span::before{content:"";display:inline-block;width:1px;height:12px;background:#ccc;margin:0 10px 0 6px;vertical-align:-1px}
+.gallview_head .gall_writer .fr > span:first-child::before,.album_head .gall_writer .fr > span:first-child::before{display:none}
+.gallview_head .gall_date,.gallview_head  .gall_count,.gallview_head .gall_reply_num, .gallview_head .gall_comment {cursor:default}
+.gallview_head .gall_comment a{display:inline-block;height:20px;line-height:20px;padding:0 10px;background:#eee;border:1px #ccc solid;border-radius:50px}
+.gallview_head .gall_comment a:hover{text-decoration:none}
+
+.txt_plusminus{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",arial,굴림,Gulim,sans-serif;font-weight:bold;font-size:13px;cursor:pointer}
+
+.gallview_contents {padding: 10px; margin-bottom: 20px;}
